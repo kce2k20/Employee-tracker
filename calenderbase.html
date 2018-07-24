@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Google Calendar API Quickstart</title>
+  <meta charset="utf-8">
+  <meta http-equiv="Refresh" content="60">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>  
+  <!-- <meta http-equiv="refresh" content="15; URL=#"> -->
+  <style>
+    .cal {
+      float: left;
+      clear: right;
+      position: relative;
+      width: 99%;
+    }
+
+    /*button {
+      border: 2px solid red;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background: transparent;
+      color: red;
+      outline: 0px;
+    }
+
+    button:hover {
+      color: white;
+      background: #43423e;
+    }*/
+
+    .footer {
+      position: absolute;
+      right: 1px;
+      bottom: 0;
+      left: 1px;
+      padding: 1rem;
+      background-color: rgb(212, 197, 197);
+      text-align: center;
+    }
+    iframe{
+    	border: none;
+    	outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=spu3cf8stcilrf5qhh8tra4gv8%40group.calendar.google.com&amp;color=%23711616&amp;ctz=Asia%2FCalcutta" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
+  <div class="cal">
+    <!-- <iframe src="https://calendar.google.com/calendar/embed?src=79o5ga07q276rv6oj6cvnj32u8%40group.calendar.google.com&ctz=Asia%2FCalcutta"
+      style="border:solid 0px #777;width: 100%;background: aqua;" height="600" frameborder="1" scrolling="no"></iframe> -->
+      <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffcc66&amp;src=kce2k20%40gmail.com&amp;color=%23BE6D00&amp;ctz=Asia%2FCalcutta" style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+    <div class="footer">
+      <center>
+        <!-- here add your calendar link  -->
+        <a href="https://calendar.google.com/calendar?cid=a2NlMmsyMEBnbWFpbC5jb20"
+          target="calendar">
+          <button class="btn btn-primary">Click to Edit</button>
+        </a>
+      </center>
+    </div>
+  </div>
+</body>
+
+</html>

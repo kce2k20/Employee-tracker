@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Tracker</title>
+	<meta charset="utf-8">
+	<link rel="icon" size="32x32" href="Logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>  
+    <style type="text/css">
+
+            .navbar{
+    	border-radius: 0%;
+    }
+   	#temp{
+	height: 100%;
+	width: 100%;
+	background: #464f52;
+	color: white;
+	font-size:20px;
+	}
+	.box{
+		background:  #464f52;
+	}
+	.cont{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		color: white;
+	}
+	.box:hover{
+		background: #43423e;
+	}
+	#one{
+		background: #74b9ff;
+	}
+		table{
+		font-size: 15px;
+	}
+	.ico{
+		position: relative;
+		top: -5px;
+	}
+	#head{
+		position: relative;
+		top: 5px;
+	}
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse" style="background: #2d3436;">
+  <div class="container-fluid menu">
+   
+     <div class="navbar-header menu">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main">
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" >
+        	<table class="ico">
+        		<col width="50">
+        		<col width="200">
+        		<tr>
+        			<td><img src="Logo.png" width="35px" height="35px"></td>
+        			<td id="head"><p style="font-size: 20px;">Employee Tracker<p></td>
+        		</tr>		
+        	</table>
+       	</a>
+     </div>  	
+     
+     <div class="collapse navbar-collapse menu" id="main">
+        <ul class="nav navbar-nav menu">
+        	<li id="cxcx" >Employee Tracker</li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+        </ul>
+
+     </div>
+  </div>
+	
+</nav>
+
+<div class="container">
+	<div class="row topnav col-md-12">
+		<a href="calender.html"><div class="col-md-4 box" id="one"><div class="cont"><center>Calender</center></div></div></a>
+		<a href="mainpage.php"><div class="col-md-4 box" ><div class="cont"><center>Tracker</center></div></div></a>
+		<a href="statistics.php"><div class="col-md-4 box" ><div class="cont"><center>Statistics</center></div></div></a>
+	</div>
+</div>
+<br>
+<div class="container-fluid">
+	<iframe src="calenderbase.html" height="85%" width="98%" style="position: absolute;"></iframe>
+</div>
+
+
+</body>
+</html>

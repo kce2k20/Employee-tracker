@@ -1,0 +1,172 @@
+<?php
+require __DIR__."/vendor/autoload.php";
+const DEFAULT_URL = 'https://employeetracker-2k20.firebaseio.com/';
+const DEFAULT_TOKEN = 'oPsSz0FIa6hN9XImPvJwwdsMAiThXsxEDY0u2O0d';
+const DEFAULT_PATH = '';
+
+$firebase = new \Firebase\FirebaseLib(DEFAULT_URL, DEFAULT_TOKEN);
+$emp = array("E741", "E941", "E712","E134", "E333", "E131","E118", "E238", "E213","E130", "E148");
+$x=array();
+$arrlength = count($emp);
+for($x = 0; $x < $emp; $x++) {
+$asg = $firebase->get(DEFAULT_PATH.'/employeedata'.$emp[x].'/assigned');
+$com = $firebase->get(DEFAULT_PATH.'/employeedata'.$emp[x].'/completed');
+array_push($x,$asg);
+array_push($y,$com);
+}
+echo array_values($x)[0];
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Tracker</title>
+	<meta charset="utf-8">
+	<link rel="icon" size="32x32" href="Logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>  
+    <style type="text/css">
+
+    .navbar{
+    	border-radius: 0%;
+    }
+   		#temp{
+	height: 100%;
+	width: 100%;
+	background: #464f52;
+	color: white;
+	font-size:20px;
+	}
+	.box{
+		background:  #464f52;
+	}
+	.cont{
+		padding-top: 20px;
+		padding-bottom: 20px;
+		color: white;
+	}
+	.box:hover{
+		background: #43423e;
+	}
+		#one{
+		background: #74b9ff;
+	}
+	#num{
+		font-size: 40px;
+	}
+	table{
+		font-size: 15px;
+	}
+	.ico{
+		position: relative;
+		top: -5px;
+	}
+	#head{
+		position: relative;
+		top: 5px;
+	}
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse" style="background: #2d3436;">
+  <div class="container-fluid menu">
+   
+     <div class="navbar-header menu">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main">
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" >
+        	<table class="ico">
+        		<col width="50">
+        		<col width="200">
+        		<tr>
+        			<td><img src="Logo.png" width="35px" height="35px"></td>
+        			<td id="head"><p style="font-size: 20px;">Employee Tracker<p></td>
+        		</tr>		
+        	</table>
+       	</a>
+     </div>  	
+     
+     <div class="collapse navbar-collapse menu" id="main">
+        <ul class="nav navbar-nav menu">
+        	<li id="cxcx" >Employee Tracker</li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+        </ul>
+
+     </div>
+  </div>
+	
+</nav>
+
+<div class="container">
+	<div class="row topnav col-md-12">
+		<a href="calender.html"><div class="col-md-4 box" ><div class="cont"><center>Calender</center></div></div></a>
+		<a href="map.html"><div class="col-md-4 box"><div class="cont"><center>Tracker</center></div></div></a>
+		<a href="stat.html"><div class="col-md-4 box" id="one"><div class="cont"><center>Statistics</center></div></div></a>
+	</div>
+</div>
+<br>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-4">
+			<center><h3>No.Of.Tasks Allocated : </h3><br><p id="num">102</p></center>
+		</div>
+		<div class="col-md-4">
+			<center><h3>No.Of.Tasks Completed : </h3><br><p id="num">86</p></center>
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+</div>
+
+<br>
+<br>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-striped">
+				<tr>
+					<th>S.No</th>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Allocated tasks</th>
+					<th>Completed tasks</th>
+					<th>Ratings</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>10101</td>
+					<td>Aswin Udhayakumar</td>
+					<td>100</td>
+					<td>88</td>
+					<td>8.5/10</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>10102</td>
+					<td>David Gabriel</td>
+					<td>151</td>
+					<td>124</td>
+					<td>8/10</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>10103</td>
+					<td>Javagal Aswin</td>
+					<td>80</td>
+					<td>65</td>
+					<td>8.2/10</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
